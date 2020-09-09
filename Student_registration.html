@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" class="h-100">
+ <head>
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ <title>Student Wing</title>
+ </head>
+ <body class="h-100">
+  <div class="page-header text-center">
+    <h1 class="bg-dark text-white">DAP University</h1>
+  </div><br>
+
+  <div class="container h-100">
+  <div class="row h-70 justify-content-center align-items-center">
+  <div class="col-10 col-md-8 col-lg-6">
+
+    <!-- Form Open -->
+    <form class="form-example" action="" method="post">
+      <h2>Student: Registration</h2>
+      <br><br>
+
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationDefault01">First name</label>
+          <input type="text" class="form-control" id="validationDefault01" placeholder="First name"required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="validationDefault02">Last name</label>
+          <input type="text" class="form-control" id="validationDefault02" placeholder="Last name"required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="validationDefaultUsername">Username</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupPrepend2">@</span>
+            </div>
+            <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
+          </div>
+        </div>
+        <div class="form-row align-items-center">
+          <div class="col-md-12 mb-3">
+            <label class="col-md-4" for="inlineFormCustomSelect">Gender</label>
+            <select class="custom-select mr-sm-6" id="inlineFormCustomSelect">
+            <option selected>Choose...</option>
+            <option value="1">Female</option>
+            <option value="2">Male</option>
+            <option value="3">Other</option>
+            <option value="4">Prefer not to say</option>
+            </select>
+          </div>
+        </div>
+        
+
+        <div class="col-md-12 mb-3">
+          <label for="validationDefault02">Email</label>
+          <input type="text" class="form-control" id="validationDefault02" placeholder="Email" required>
+        </div>
+
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-4">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            <small id="inputPassword3" class="form-text text-muted">Must be 8-20 characters</small>
+          </div>
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Re enter Password</label>
+          <div class="col-sm-4">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Re-enter Password">
+            <small id="inputPassword3" class="form-text text-muted">Must be 8-20 characters</small>
+          </div>
+        </div>
+
+
+      </div>
+      <div class="form-row">
+        <div class="col-md-5 mb-3">
+          <label for="validationDefault03">City</label>
+          <input type="text" class="form-control" id="validationDefault03" placeholder="City" required>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationDefault04">State</label>
+          <input type="text" class="form-control" id="validationDefault04" placeholder="State" required>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationDefault05">Zip</label>
+          <input type="text" class="form-control" id="validationDefault05" placeholder="Zip" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required>
+          <label class="form-check-label" for="invalidCheck2">
+          Agree to terms and conditions
+          </label>
+        </div>
+      </div>
+      <div class="text-center">
+      <button class="btn btn-primary col-md-6 mb-3" type="submit">Register</button>
+      </div>
+    </form>
+    <!-- Form End -->
+
+  </div>
+  </div>
+  </div>
+ </body>
+</html>
