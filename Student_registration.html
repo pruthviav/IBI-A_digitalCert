@@ -8,6 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+
+
  <title>Student Wing</title>
  </head>
  <body class="h-100">
@@ -107,5 +109,155 @@
   </div>
   </div>
   </div>
+
+  <script src=".\node_modules\web3\dist\web3.min.js"> </script>
+
+  <script>
+
+        if (typeof web3 !== 'undefined') {
+            web3 = new Web3(web3.currentProvider);
+        } else {
+            // set the provider you want from Web3.providers
+            web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+        }
+
+        web3.eth.defaultAccount = web3.eth.accounts[0];
+
+        var coinbase = '';
+
+        var dC = new web3.eth.Contract([
+                     {
+                      "constant": false,
+                      "inputs": [
+                     {
+                      "name": "_StudentFName",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_StudentLName",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_username",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_gender",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_email",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_password",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_studId",
+                      "type": "string"
+                     }
+                  ],
+                      "name": "addStudent",
+                      "outputs": [
+                     {
+                      "name": "studId",
+                      "type": "string"
+                     }
+                  ],
+                      "payable": false,
+                      "stateMutability": "nonpayable",
+                      "type": "function"
+                     },
+                     {
+                      "constant": true,
+                      "inputs": [
+                     {
+                      "name": "_studId",
+                      "type": "string"
+                     }
+                  ],
+                      "name": "getStudentDetails",
+                      "outputs": [
+                     {
+                      "name": "_StudentFName",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_StudentLName",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_username",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_gender",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_email",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_password",
+                      "type": "string"
+                     }
+                    ],
+                      "payable": false,
+                      "stateMutability": "view",
+                      "type": "function"
+                     },
+                     {
+                      "constant": false,
+                      "inputs": [
+                     {
+                      "name": "_StudentFName",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_StudentLName",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_username",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_gender",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_email",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_password",
+                      "type": "string"
+                     },
+                     {
+                      "name": "_studId",
+                      "type": "string"
+                     }
+                  ],
+                      "name": "updateStudent",
+                      "outputs": [
+                     {
+                      "name": "studId",
+                      "type": "string"
+                     }
+                  ],
+                      "payable": false,
+                      "stateMutability": "nonpayable",
+                      "type": "function"
+                     }
+                  ]);
+
+        var digiCert = dC.at('0x8fdE24078cD59880DE04C192b9b6567Ed28a6d6e');
+        console.log(digiCert);
+
+    </script>
+
+
  </body>
 </html>
