@@ -1,0 +1,15 @@
+﻿Login With Student001 Server
+
+1] sudo chmod 0600 student001
+
+2] Student001 Login=====> ssh -i student001 student001@51.75.91.122 
+
+    Password-snap@2020
+
+3] ssh 10.0.44.112  Password-snap@2020
+
+4] sudo su - 
+
+5] Go to Project Folder and deploy your code 
+
+6] 51.75.93.50-Global ip access from outside
